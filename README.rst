@@ -2,7 +2,7 @@ Mom
 ===
 
 Mom is a python module that contains one single decorator called decorate_with, 
-but this is also a powerful decorator. It's every decorators mom.
+but this is also a powerful decorator. It's the mother of all decorators.
 
 In the future I might add more meta stuff here, but at the moment I just need 
 this single decorator.
