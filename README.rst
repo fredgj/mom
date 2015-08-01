@@ -28,7 +28,7 @@ decorators looks ugly like in the example below
     def func(*args, **kwargs):
         pass
 
-decorate_with lets you decorate you function with all the decorators you need 
+decorate_with lets you decorate your functions with all the decorators you need 
 in one single "decoration".
 
 .. code:: python
