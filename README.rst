@@ -17,8 +17,8 @@ Usage
 decorate_with is a decorator that takes other decorators as input, including 
 their arguments (if any).
 
-Some people think decorating their functions with several
-decorators looks ugly like in the example below
+Some people think decorating their functions with several decorators like in 
+the example below looks way too ugly.
 
 .. code:: python
 
