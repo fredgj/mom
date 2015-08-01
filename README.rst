@@ -14,8 +14,8 @@ at least for some people.
 Usage
 -----
 
-decorate_with is a decorator that takes other decorators as input, including their
-arguments.
+decorate_with is a decorator that takes other decorators as input, including 
+their arguments (if any).
 
 Since some people think decorating their functions with several
 decorators looks ugly like in the example below
@@ -28,8 +28,8 @@ decorators looks ugly like in the example below
     def func(*args, **kwargs):
         pass
 
-decorate_with lets you decorate you function with all the decorators you need in one 
-single "decoration".
+decorate_with lets you decorate you function with all the decorators you need 
+in one single "decoration".
 
 .. code:: python
 
