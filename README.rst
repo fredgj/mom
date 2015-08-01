@@ -61,7 +61,6 @@ First, lets define a simple decorate with two default arguments:
 
 .. code:: python
     
-    # First, lets define a simple decorator with two default arguments.
     def decorator(func=None, msg1=None, msg2=None):
         if func:
             def wrapper(*args, **kwargs):
