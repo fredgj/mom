@@ -47,8 +47,8 @@ you can just pass it in directly. If the decorator has arguemnts you
 need to add it to a list together its arguments.
 
 
-If a decorator is using keyword arguments you need to pass the keyword
-dictionary to decorate_with. This can be done like this:
+If a decorator has been defined with default arguments you need to pass the 
+keyword dictionary to decorate_with. This can be done like this:
 
 .. code:: python
     
