@@ -1,1 +1,1 @@
-from mom.meta import decorators
+from mom.meta import decorate

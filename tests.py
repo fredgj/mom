@@ -1,8 +1,5 @@
 import unittest
-import sys
-# not the best idea...
-sys.path.append('..')
-from mom import decorators
+from mom import decorate
 
 
 def decorator_without_args(func):
@@ -19,7 +16,7 @@ def decorator_with_args(*args):
     return wrapper
 
 
-@decorators(decorator_without_args, [decorator_with_args, 'arg1', 'arg2'])
+@decorate(decorator_without_args, [decorator_with_args, 'arg1', 'arg2'])
 def add(x,y):
     return x+y
 

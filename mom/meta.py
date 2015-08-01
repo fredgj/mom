@@ -1,6 +1,6 @@
 from functools import wraps
 
-def decorators(*decorators):
+def decorate(*decorators):
     def wrapper(func):
         @wraps(func)
         def func_wrapper(*args, **kwargs):
