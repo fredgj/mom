@@ -7,6 +7,8 @@ but this is also a powerful decorator. It's the mother of all decorators.
 
 decorate_with is a decorator that takes other decorators as input, including 
 their arguments (if any).
+It lets you decorate your functions with all the decorators you need 
+in one single "decoration".
 
 It might not be the most useful decorator, but it intends to solve a problem,
 at least for some people.
