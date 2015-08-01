@@ -19,6 +19,14 @@ usage:
     @decorate_with(decorator1, decorator2, [decorator3, arg1, arg2])
     def func(*args, **kwargs):
         pass
+    
+
+    This is how it works if you want to use a decorator defined with
+    default arguments, you need to pass in the keyword dictionary.
+    
+    @decorate_with([decorator, {'arg1':'Hello', 'arg2':'World'}])
+    def func(*args, **kwargs):
+        pass
 """
 
 __title__ = 'mom'
