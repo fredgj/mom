@@ -33,9 +33,11 @@ single "decoration".
 
 .. code:: python
 
-   @decorate(decorator1, decorator2, [decorator3, arg1, arg2])
-   def func(*args, **kwargs):
-       pass
+    from mom import decorate
+
+    @decorate(decorator1, decorator2, [decorator3, arg1, arg2])
+    def func(*args, **kwargs):
+        pass
 
 
 
