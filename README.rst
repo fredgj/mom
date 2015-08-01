@@ -58,7 +58,7 @@ If a decorator has been defined with default arguments you need to pass the
 keyword arguments dictionary to decorate_with, in case you have any keyword
 arguemnts to pass. 
 
-First, lets write a simple decorator with two default arguments:
+First, lets write a simple decorator with two default arguments.
 In the reality there are three default arguments, but *func* will be 
 overwritten from wrapper inside the else part if *msg1* and/or *msg2* have a 
 value.
