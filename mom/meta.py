@@ -1,6 +1,9 @@
 from functools import wraps
 
 def decorate_with(*decorators):
+    """decorate_with is a decorator that takes other decorators as input,
+       including their arguments (if any), and applies the them to the function
+       being decorated"""
     def wrapper(func):
         @wraps(func)
         def func_wrapper(*args, **kwargs):
