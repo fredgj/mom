@@ -11,8 +11,12 @@ def decorate_with(*decorators):
             for decorator in decorators:
                 if isinstance(decorator, list):
                     dec = decorator[0]
-                    arguments = decorator[1:len(decorator)]
-                    _func = dec(*arguments)(_func)
+                    # In case the user isn't careful enough
+                    if len(decorator) > 1:
+                        arguments = decorator[1:len(decorator)]
+                        _func = dec(*arguments)(_func)
+                    else:
+                        _func = dec(func)
                 else:
                     _func = decorator(_func)
             return _func(*args, **kwargs)
