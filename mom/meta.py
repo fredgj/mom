@@ -14,7 +14,11 @@ def decorate_with(*decorators):
                     # In case the user isn't careful enough
                     if len(decorator) > 1:
                         arguments = decorator[1:len(decorator)]
-                        _func = dec(*arguments)(_func)
+                        kwarguments = {}
+                        if isinstance(arguments[-1], dict):
+                            kwarguments = arguments[-1]
+                            arguments = arguments[0:len(arguments)-1]
+                        _func = dec(*arguments, **kwarguments)(_func)
                     else:
                         _func = dec(_func)
                 else:
