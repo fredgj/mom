@@ -42,6 +42,8 @@ in one single "decoration".
     # you can also add each decorator to a list if that's what you prefer,
     # like this:
     @decorate_with([decorator1],[decorator2], [decorator3, arg1, arg2])
+    def func(*args, **kwargs):
+        pass
 
 As you can see in the example above, decorate_with takes other decorators as
 arguments and applies them to the function. If the decorator has no arguments 
