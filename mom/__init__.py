@@ -24,6 +24,8 @@ usage:
 __title__ = 'mom'
 __version__ = '0.1.0'
 __author__ = 'Fredrik Gjertsen'
+__licence__ = 'MIT'
+__copyright__ = 'Copyright 2015 Fredrik Gjertsen'
 
 
 from mom.meta import decorate_with
