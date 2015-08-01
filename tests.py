@@ -1,5 +1,5 @@
 import unittest
-from mom import decorate
+from mom import decorate_with
 
 
 def decorator_without_args(func):
@@ -16,7 +16,7 @@ def decorator_with_args(*args):
     return wrapper
 
 
-@decorate(decorator_without_args, [decorator_with_args, 'arg1', 'arg2'])
+@decorate_with(decorator_without_args, [decorator_with_args, 'arg1', 'arg2'])
 def add(x,y):
     return x+y
 
