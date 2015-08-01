@@ -60,8 +60,8 @@ arguemnts to pass.
 
 First, lets write a simple decorator with two default arguments.
 In the reality there are three default arguments, but *func* will be 
-overwritten from wrapper inside the else part if *msg1* and/or *msg2* have a 
-value.
+overwritten by wrapper's scope inside the else part if *msg1* and/or *msg2* 
+have a value.
 
 .. code:: python
     
