@@ -55,25 +55,43 @@ arguments.
 
 
 If a decorator has been defined with default arguments you need to pass the 
-keyword arguments dictionary to decorate_with. This can be done like this:
+keyword arguments dictionary to decorate_with, if you have any arguments. 
+
+First, lets define a simple decorate with two default arguments:
 
 .. code:: python
     
     # First, lets define a simple decorator with two default arguments.
-    def decorator(msg1=None, msg2=None):
-        def wrapper(func):
-            def func_wrapper(*args, **kwargs):
-                if msg1:
-                    print(msg1)
-                if msg2:
-                    print(msg2)
+    def decorator(func=None, msg1=None, msg2=None):
+        if func:
+            def wrapper(*args, **kwargs):
                 return func(*args, **kwargs)
-            return func_wrapper
-        return wrapper
+            return wrapper
+        else:
+            def wrapper(func):
+                def func_wrapper(*args, **kwargs):
+                    if msg1:
+                        print(msg1)
+                    if msg2:
+                        print(msg2)
+                    return func(*args, **kwargs)
+                return func_wrapper
+            return wrapper
 
+Now we can apply it like this:
+
+.. code:: python
 
     @decorate_with([decorator, {'msg1':'hello', 'msg2':'world'}])
     def func(*args, **kwargs):
         pass
             
+    
+    @decorate_with(decorator)
+    def func(*args, **kwargs):
+        pass
+
+
+
+
 
