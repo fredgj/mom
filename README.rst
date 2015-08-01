@@ -85,8 +85,11 @@ Now we can apply it like this:
     @decorate_with([decorator, {'msg1':'hello', 'msg2':'world'}])
     def func(*args, **kwargs):
         pass
-            
+
+Or without any arguments        
     
+.. code:: python
+
     @decorate_with(decorator)
     def func(*args, **kwargs):
         pass
