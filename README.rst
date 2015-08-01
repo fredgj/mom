@@ -15,7 +15,7 @@ Usage
 -----
 
 decorate_with is a decorator that takes other decorators as input, including 
-their arguments (if any).
+their arguments or keyword arguments (if any).
 
 Some people think decorating their functions with several decorators like in 
 the example below looks way too ugly.
@@ -45,4 +45,28 @@ As you can see in the example above, decorate_with takes other decorators as
 arguments and applies them to the function. If the decorator has no arguments 
 you can just pass it in directly. If the decorator has arguemnts you
 need to add it to a list together its arguments.
+
+
+If a decorator is using keyword arguments you need to pass the keyword
+dictionary to decorate_with. This can be done like this:
+
+.. code:: python
+    
+    # First, lets define a simple decorator with two default arguments.
+    def decorator(msg1=None, msg2=None):
+        def wrapper(func):
+            def func_wrapper(*args, **kwargs):
+                if msg1:
+                    print(msg1)
+                if msg2:
+                    print(msg2)
+                return func(*args, **kwargs)
+            return func_wrapper
+        return wrapper
+
+
+    @decorate_with([decorator, {'msg1':'hello', 'msg2':'world'}])
+    def func(*args, **kwargs):
+        pass
+            
 
