@@ -4,8 +4,8 @@ Mom
 Mom is a python module that contains one single decorator called decorate_with, 
 but this is also a powerful decorator. It's the mother of all decorators.
 
-In the future I might add more meta stuff here, but at the moment I just need 
-this single decorator.
+In the future I might add some more meta stuff here, but at the moment I only 
+need this single decorator.
 
 It might not be the most useful decorator, but it intends to solve a problem,
 at least for some people.
