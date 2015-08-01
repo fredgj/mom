@@ -57,7 +57,7 @@ arguments.
 If a decorator has been defined with default arguments you need to pass the 
 keyword arguments dictionary to decorate_with, if you have any arguments. 
 
-First, lets define a simple decorate with two default arguments:
+First, lets define a simple decorator with two default arguments:
 
 .. code:: python
     
