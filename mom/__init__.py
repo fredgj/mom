@@ -22,7 +22,7 @@ usage:
     
 
     This is how it works if you want to use a decorator defined with
-    default arguments, you need to pass in the keyword dictionary.
+    default arguments, you need to pass in the keyword arguments dictionary.
     
     @decorate_with([decorator, {'arg1':'Hello', 'arg2':'World'}])
     def func(*args, **kwargs):
