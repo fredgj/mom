@@ -15,7 +15,7 @@ Usage
 -----
 
 decorate_with is a decorator that takes other decorators as input, including 
-their arguments or keyword arguments (if any), in order to apply them to a
+their arguments and/or keyword arguments (if any), in order to apply them to a
 function.
 
 Some people think decorating their functions with several decorators like in 
