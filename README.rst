@@ -55,7 +55,8 @@ arguments.
 
 
 If a decorator has been defined with default arguments you need to pass the 
-keyword arguments dictionary to decorate_with, if you have any arguments. 
+keyword arguments dictionary to decorate_with, in case you have any keyword
+arguemnts to pass. 
 
 First, lets define a simple decorator with two default arguments:
 
