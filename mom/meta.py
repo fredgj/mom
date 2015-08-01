@@ -16,7 +16,7 @@ def decorate_with(*decorators):
                         arguments = decorator[1:len(decorator)]
                         _func = dec(*arguments)(_func)
                     else:
-                        _func = dec(func)
+                        _func = dec(_func)
                 else:
                     _func = decorator(_func)
             return _func(*args, **kwargs)
