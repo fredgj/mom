@@ -39,12 +39,16 @@ in one single "decoration".
     def func(*args, **kwargs):
         pass
 
-
+    # you can also add each decorator to a list if that's what you prefer,
+    # like this:
+    @decorate_with([decorator1],[decorator2], [decorator3, arg1, arg2])
 
 As you can see in the example above, decorate_with takes other decorators as
 arguments and applies them to the function. If the decorator has no arguments 
-you can just pass it in directly. If the decorator has arguemnts you
-need to add it to a list together its arguments.
+you can just pass it in directly, or as a list, it's up to the user. Though
+passing them in directly looks slightly more elegant.
+If the decorator has any arguments you need to add it to a list together its 
+arguments.
 
 
 If a decorator has been defined with default arguments you need to pass the 
